@@ -76,11 +76,11 @@ class EloquentUuid {
 		}
 
 		if (!$model->id) {
-			$uuid_method = 'Uuid::'.$method;
-			Kint::dump($uuid_method);
-			if ( is_callable($uuid_method) ) {
-
-				$uuid = call_user_func_array($uuid_method, $opts);
+			if (is_callable($method)) {
+				$uuid = call_user_func_array($method, $opts);
+			} else if ( method_exists('Rhumsaa\Uuid\Uuid', $method)) {
+				
+				$uuid = Uuid::$method($opts);
 
 			} else if ( $method instanceof Closure ) {
 
