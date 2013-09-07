@@ -1,0 +1,28 @@
+{
+    "name": "peach-schnapps/eloquent-uuid",
+    "description": "Provides UUID Support for Laravel 4 Eloquent Models",
+    "keywords": ["eloquent", "laravel", "l4", "uuid"],
+    "authors": [
+        {
+            "name": "electblake",
+            "email": "electblake@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x",
+        "rhumsaa/uuid": "~2.4"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "PeachSchnapps\\EloquentUuid": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
